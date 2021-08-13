@@ -1,0 +1,184 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
+*, ::before, ::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: #222;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.homePage{
+    background-color: #222;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo{
+    cursor: pointer;
+    animation: grown 2s infinite
+}
+
+
+@keyframes grown {
+    0% { transform: scale(1); }
+    50%   { transform: scale(1.2); }
+  }
+
+.nav-rm{
+    display: flex;
+    list-style-type: none;
+    font-size: 2em;
+    color: rgb(211, 203, 203);
+    justify-content: flex-start;
+    box-shadow: 0px 6px 20px -3px #000000;
+}
+
+.nav-rm li {
+    margin: 30px;
+}
+
+.card-chara{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card{
+    display: flex;
+    align-items: center;
+    margin: 50px 10px 50px ;
+    color: white;
+    width: 850px;
+    background-color: rgb(77, 75, 75);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-50px);
+}
+
+.card img{
+    height: 20em;
+    border-radius: 50%;
+}
+
+.card p {
+    font-size: 2em;
+    font-family: 'Poiret One', sans-serif;
+    padding-top: 12px;
+}
+
+.textChara{
+    padding-left: 50px;
+    letter-spacing: 3px;
+}
+
+span{
+    font-weight: bolder;
+    color: white !important;
+}
+
+.title{
+    text-align: center;
+    color: #fff;
+    font-size: 6em;
+    font-family: 'Poiret One', sans-serif
+}
+
+.logoChara{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 150px;
+}
+
+.logoChara img{
+    height: 30em;
+    filter: 
+    drop-shadow(0 0.15vw 0.30vw #10c21f)
+    drop-shadow(0 0.15vw 0.30vw #10c21f);
+    animation: blink 1s infinite alternate; 
+    transform: scale(0);
+}
+
+@keyframes blink {
+    100%{
+  
+        filter: 
+        drop-shadow(0 0.15vw 0.30vw #10c21f)
+        drop-shadow(0 0.15vw 0.30vw #10c21f);
+    
+    }
+    
+    100% {        
+        
+        filter: none;
+    }  
+  }
+
+  @media (max-width: 865px) {
+
+    .card{
+        display: flex;
+        flex-direction: column;
+        margin: 50px 80px 50px ;
+    }
+
+    .card p {
+        font-size: 1.5em;
+        font-family: 'Poiret One', sans-serif;
+        padding-top: 12px;
+    }
+    
+    .textChara{
+        padding-left: 15px;
+        letter-spacing: 2.5px;
+    }
+
+   }
+
+.pagination{
+    font-size: 4em;
+    padding: 15px;
+    margin: 70px 0px;
+    cursor: pointer;
+   }
+
+.active{
+    color: grey;
+}
+
+.notActive{
+    color: #10c21f;
+}
+
+.listPagination{
+    display: flex;
+    justify-content: center;
+}
+
+.switchPage{
+    background-color: transparent;
+    border: none;
+    font-size: 3em;
+    cursor: pointer;
+    color: #10c21f;
+    margin: 95px 30px 0px;
+    height: 60px;
+}
+
+.switchPage:hover{
+    color: grey;
+}
