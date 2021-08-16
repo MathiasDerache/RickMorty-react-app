@@ -1,4 +1,5 @@
-import { useState, useEffect} from 'react'
+import { useState, useEffect, useRef} from 'react'
+import gsap from "gsap";
 
 export default function Pagination(props) {
 
@@ -8,8 +9,15 @@ export default function Pagination(props) {
     const [maxPageNumberLimit, setMaxPageNumberLimit] = useState(5);
     const [minPageNumberLimit, setMinPageNumberLimit] = useState(0);
 
+    const pageRef = useRef(null)
+
     useEffect(() => {
 
+        gsap.to(pageRef.current, {
+            y: 0,
+            autoAlpha: 1, 
+            delay : 1.3
+        })
 
     }, [])
 
@@ -30,7 +38,8 @@ export default function Pagination(props) {
     }
 
     return (
-        <div className="listPagination">
+        
+        <div className="listPagination" ref={pageRef}>
             {props.currentPage === 1 ? <button  className="switchPage" onClick={prevBtn} disabled >Prev</button> :
             <button  className="switchPage" onClick={prevBtn}>Prev</button>  }
             

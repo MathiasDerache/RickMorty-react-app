@@ -4,10 +4,8 @@ import { apiCall } from '../ApiCall';
 import ListChara from './ListChara';
 import Pagination from './Pagination';
 import logo from '../Assets/images/logo2.png'
+import arrow from '../Assets/images/arrow.svg'
 import gsap from "gsap";
-
-
-
 
 
 export default function Characters() {
@@ -41,10 +39,10 @@ export default function Characters() {
             scale : 1,  
             delay : 0.2
         })
-        gsap.from(titleRef.current, {
-            x :-1000,
-            opacity:0,
+        gsap.to(titleRef.current, {
+            opacity:1,
             delay: 0.8,
+            x : 0,
             ease: "Back.easeOut"
         })
 
@@ -55,11 +53,32 @@ export default function Characters() {
         setCurrentPage(num)
     }
 
+    const upPage = () => {
+
+        window.scrollTo({
+            top:0,
+            left:0,
+            behavior: "smooth"
+        })
+    }
+
     return (
         <>
+        
+        <div className="arrowBtn">
+            <img src={arrow} alt="" className="arrowIcone" onClick={upPage}/>
+        </div>
+
         <div  className="logoChara">
             <img src={logo} alt="Logo" ref={imgRef}/>
             <h1 className="title" ref={titleRef}>Characters List</h1>
+        </div>
+        <div>
+                <Pagination
+                changePage={changePage}
+                currentPage={currentPage}
+                setCurrentPage={setCurrentPage}
+                />
         </div>
         <div className="card-chara">
             {done ?
@@ -79,13 +98,7 @@ export default function Characters() {
             )
             : <p>Loading</p>}
         </div>
-        <div>
-                <Pagination
-                changePage={changePage}
-                currentPage={currentPage}
-                setCurrentPage={setCurrentPage}
-                />
-        </div>
+
         </>
     )
 }
