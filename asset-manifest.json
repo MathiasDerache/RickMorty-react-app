@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/RickMorty-react-app/static/css/main.dbaa1f03.chunk.css",
+    "main.js": "/RickMorty-react-app/static/js/main.cf9bc193.chunk.js",
+    "main.js.map": "/RickMorty-react-app/static/js/main.cf9bc193.chunk.js.map",
+    "runtime-main.js": "/RickMorty-react-app/static/js/runtime-main.2fd21264.js",
+    "runtime-main.js.map": "/RickMorty-react-app/static/js/runtime-main.2fd21264.js.map",
+    "static/js/2.cb154765.chunk.js": "/RickMorty-react-app/static/js/2.cb154765.chunk.js",
+    "static/js/2.cb154765.chunk.js.map": "/RickMorty-react-app/static/js/2.cb154765.chunk.js.map",
+    "index.html": "/RickMorty-react-app/index.html",
+    "static/css/main.dbaa1f03.chunk.css.map": "/RickMorty-react-app/static/css/main.dbaa1f03.chunk.css.map",
+    "static/js/2.cb154765.chunk.js.LICENSE.txt": "/RickMorty-react-app/static/js/2.cb154765.chunk.js.LICENSE.txt",
+    "static/media/arrow.792c8c47.svg": "/RickMorty-react-app/static/media/arrow.792c8c47.svg",
+    "static/media/logo.de13d484.png": "/RickMorty-react-app/static/media/logo.de13d484.png",
+    "static/media/logo2.1cc4ae97.png": "/RickMorty-react-app/static/media/logo2.1cc4ae97.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2fd21264.js",
+    "static/js/2.cb154765.chunk.js",
+    "static/css/main.dbaa1f03.chunk.css",
+    "static/js/main.cf9bc193.chunk.js"
+  ]
+}
